@@ -1,14 +1,14 @@
 <?php
 
 use Dezinger\SmartCaptcha\Facades\SmartCaptcha;
+use Dezinger\SmartCaptcha\SmartCaptchaBuilder;
 
 if (!function_exists('smartcaptcha')) {
     /**
-     * @return Dezinger\SmartCaptcha\SmartCaptchaBuilder
+     * @return SmartCaptchaBuilder
      */
-    function smartcaptcha(): \Dezinger\SmartCaptcha\SmartCaptchaBuilder
+    function smartcaptcha(): SmartCaptchaBuilder
     {
-
         return app('smartcaptcha');
     }
 }
@@ -20,16 +20,15 @@ if (!function_exists('smartcaptcha')) {
  *
  * @param $config
  */
-if (!function_exists('htmlScriptTagJsApi')) {
+if (!function_exists('smartcaptchaHtmlScriptTagJsApi')) {
 
     /**
      * @param array|null $config
      *
      * @return string
      */
-    function htmlScriptTagJsApi(?array $config = []): string
+    function smartcaptchaHtmlScriptTagJsApi(?array $config = []): string
     {
-
         return SmartCaptcha::htmlScriptTagJsApi($config);
     }
 }
@@ -39,15 +38,14 @@ if (!function_exists('htmlScriptTagJsApi')) {
  * Write SmartCaptcha HTML tag in your FORM
  * Insert before </form> tag
  */
-if (!function_exists('htmlFormSnippet')) {
+if (!function_exists('smartcaptchaHtmlFormSnippet')) {
 
     /**
      * @param null|array $attributes
      * @return string
      */
-    function htmlFormSnippet(?array $attributes = []): string
+    function smartcaptchaHtmlFormSnippet(?array $attributes = []): string
     {
-
         return SmartCaptcha::htmlFormSnippet($attributes);
     }
 }
@@ -62,7 +60,7 @@ if (!function_exists('smartcaptchaRuleName')) {
      */
     function smartcaptchaRuleName(): string
     {
-        return \Dezinger\SmartCaptcha\SmartCaptchaBuilder::DEFAULT_SMARTCAPTCHA_RULE_NAME;
+        return SmartCaptchaBuilder::DEFAULT_SMARTCAPTCHA_RULE_NAME;
     }
 }
 
@@ -77,7 +75,6 @@ if (!function_exists('smartcaptchaFieldName')) {
      */
     function smartcaptchaFieldName(): string
     {
-
-        return \Dezinger\SmartCaptcha\SmartCaptchaBuilder::DEFAULT_SMARTCAPTCHA_FIELD_NAME;
+        return SmartCaptchaBuilder::DEFAULT_SMARTCAPTCHA_FIELD_NAME;
     }
 }
