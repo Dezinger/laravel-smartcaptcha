@@ -1,0 +1,59 @@
+{
+    "name": "Dezinger/laravel-smartcaptcha",
+    "description": "Simple and painless Yandex SmartCaptcha package for Laravel framework",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "captcha",
+        "smartcaptcha",
+        "laravel",
+        "validation"
+    ],
+    "homepage": "https://github.com/Dezinger/laravel-smartcaptcha",
+    "authors": [
+        {
+            "name": "Aleksey Kazakov",
+            "email": "dezinger@gmail.com",
+            "homepage": "",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/routing": "^7.0|^8.0|^9.0|^10.0|^11.0",
+        "illuminate/support": "^7.0|^8.0|^9.0|^10.0|^11.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "5.*|6.*|^7.0|^8.0|^9.0",
+        "phpunit/phpunit": "^9.1|^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dezinger\\SmartCaptcha\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dezinger\\SmartCaptcha\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always"
+    },
+    "suggest": {
+        "biscolab/laravel-authlog": "It allows to handle logged-in users and force log-out if needed"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dezinger\\SmartCaptcha\\SmartCaptchaServiceProvider"
+            ],
+            "aliases": {
+                "SmartCaptcha": "Dezinger\\SmartCaptcha\\Facades\\SmartCaptcha"
+            }
+        }
+    }
+}
