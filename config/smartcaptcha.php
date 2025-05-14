@@ -36,13 +36,6 @@ return array(
 
     /**
      *
-     * The name of the parameter used to send SmartCaptcha token to verify route
-     *
-     */
-    'default_token_parameter_name' => 'token',
-
-    /**
-     *
      * The default Yandex SmartCaptcha language code
      *
      */

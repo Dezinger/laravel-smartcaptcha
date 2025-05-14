@@ -344,7 +344,7 @@ class SmartCaptchaBuilder
             }
         }
 
-        $html = '<div class="smartcaptcha" ' . implode(" ", $data_attributes) . ' id="smartcaptcha-element"></div>';
+        $html = '<div class="smart-captcha" ' . implode(" ", $data_attributes) . ' id="smartcaptcha-element"></div>';
 
         return $html;
     }
