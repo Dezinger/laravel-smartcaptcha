@@ -1,5 +1,5 @@
 {
-    "name": "Dezinger/laravel-smartcaptcha",
+    "name": "dezinger/laravel-smartcaptcha",
     "description": "Simple and painless Yandex SmartCaptcha package for Laravel framework",
     "license": "MIT",
     "type": "library",
